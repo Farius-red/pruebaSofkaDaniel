@@ -1,17 +1,18 @@
 package com.prueba.daniel.juliao.pruebaDaniel.Models;
 
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class PreguntasModel  {
      private int idPregunta ,idcategoria, idrespuesta;
-     private String pregunta ,respuesta;
-     
-     
+     private String pregunta ;
+     private List<RespuestasModel> respuesta = new ArrayList<>();
 
     public PreguntasModel() {
     }
 
-    public PreguntasModel(int idPregunta, int idcategoria, int idrespuesta, String pregunta, String respuesta) {
+    public PreguntasModel(int idPregunta, int idcategoria, int idrespuesta, String pregunta, List<RespuestasModel> respuesta) {
         this.idPregunta = idPregunta;
         this.idcategoria = idcategoria;
         this.idrespuesta = idrespuesta;
@@ -51,11 +52,15 @@ public class PreguntasModel  {
         this.pregunta = pregunta;
     }
 
-    public String getRespuesta() {
+    public List<RespuestasModel> getRespuesta() {
         return respuesta;
     }
 
-    public void setRespuesta(String respuesta) {
+    public void setRespuesta(List<RespuestasModel> respuesta) {
         this.respuesta = respuesta;
     }
+
+
+
+
 }
