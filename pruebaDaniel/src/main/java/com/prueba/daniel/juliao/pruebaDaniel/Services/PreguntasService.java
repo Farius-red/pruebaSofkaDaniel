@@ -34,6 +34,23 @@ RespuestasRepository respuestasRepository;
         listaPreguntas.add(new PreguntasModel(4,1,5,"donde"));
         listaPreguntas.add(new PreguntasModel(5,1,7,"cual"));
 
+         // categoria2
+        listaPreguntas.add(new PreguntasModel(6,2,100,"¿Cómo te llamas?"));
+        listaPreguntas.add(new PreguntasModel(7,2,18,"¿Cómo se llama tu jefe?"));
+        listaPreguntas.add(new PreguntasModel(8,2,14,"¿Cuántos años tienes?"));
+        listaPreguntas.add(new PreguntasModel(9,2,21,"¿Estás casado?"));
+        listaPreguntas.add(new PreguntasModel(10,2,24,"¿Qué estás haciendo?"));
+
+        //categoria 3
+
+        listaPreguntas.add(new PreguntasModel(11,3,34,"¿Cómo te sientes?"));
+        listaPreguntas.add(new PreguntasModel(12,3,36,"¿Estás bien?"));
+        listaPreguntas.add(new PreguntasModel(13,3,38,"¿Te sientes mejor?"));
+        listaPreguntas.add(new PreguntasModel(14,3,39,"¿Necesitas ir al médico?"));
+        listaPreguntas.add(new PreguntasModel(15,3,35,"¿Qué pasa?"));
+
+
+
 
         return  listaPreguntas;
     }
