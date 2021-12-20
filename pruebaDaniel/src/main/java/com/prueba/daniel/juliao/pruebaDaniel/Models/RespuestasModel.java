@@ -1,17 +1,19 @@
 package com.prueba.daniel.juliao.pruebaDaniel.Models;
 
+
 public class RespuestasModel {
 
-   private  int idRespuesta ;
+   private  Integer idRespuesta ;
    private  String respuesta;
-
+   private int idPregunta;
 
    public RespuestasModel() {
    }
 
-   public RespuestasModel(int idRespuesta, String respuesta) {
+   public RespuestasModel(int idRespuesta, String respuesta, int idPregunta) {
       this.idRespuesta = idRespuesta;
       this.respuesta = respuesta;
+      this.idPregunta = idPregunta;
    }
 
    public int getIdRespuesta() {
@@ -28,5 +30,13 @@ public class RespuestasModel {
 
    public void setRespuesta(String respuesta) {
       this.respuesta = respuesta;
+   }
+
+   public int getIdPregunta() {
+      return idPregunta;
+   }
+
+   public void setIdPregunta(int idPregunta) {
+      this.idPregunta = idPregunta;
    }
 }

@@ -5,18 +5,36 @@ import com.prueba.daniel.juliao.pruebaDaniel.Models.PreguntasModel;
 
 import com.prueba.daniel.juliao.pruebaDaniel.Models.RespuestasModel;
 import com.prueba.daniel.juliao.pruebaDaniel.interfases.Crud;
+import com.prueba.daniel.juliao.pruebaDaniel.repository.RespuestasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@Service
+@Transactional
 public class PreguntasService implements Crud {
+
+@Autowired
+RespuestasRepository respuestasRepository;
 
     @Override
     public List<PreguntasModel> listaPreguntas() {
         List<PreguntasModel>  listaPreguntas = new ArrayList<>();
+
+
+        //categoria 1
+        listaPreguntas.add(new PreguntasModel(1,1,1,"quien"));
+        listaPreguntas.add(new PreguntasModel(2,1,4,"porque"));
+        listaPreguntas.add(new PreguntasModel(3,1,3,"cuando"));
+        listaPreguntas.add(new PreguntasModel(4,1,5,"donde"));
+        listaPreguntas.add(new PreguntasModel(5,1,7,"cual"));
+
+
         return  listaPreguntas;
     }
 
@@ -25,22 +43,21 @@ public class PreguntasService implements Crud {
 
         List<CategoriaModel> catModel = new ArrayList<>();
 
-        catModel.add(new CategoriaModel(1,"categoria1"));
-        catModel.add(new CategoriaModel(2,"categoria2"));
-        catModel.add(new CategoriaModel(3,"categoria3"));
-        catModel.add(new CategoriaModel(4,"categoria4"));
-        catModel.add(new CategoriaModel(5,"categoria5"));
+        catModel.add(new CategoriaModel(1,"wh"));
+        catModel.add(new CategoriaModel(2,"Preguntas comunes"));
+        catModel.add(new CategoriaModel(3,"Preguntas sobre el estado de ánimo"));
+        catModel.add(new CategoriaModel(4,"Preguntas para pedir, ofrecer e invitar"));
+        catModel.add(new CategoriaModel(5,"Preferencias y actividades de ocio"));
 
         return catModel;
     }
 
     @Override
     public List<RespuestasModel> ListaRespuestas() {
+      List<RespuestasModel>listaRespuestas = new ArrayList<>();
+    listaRespuestas.add((RespuestasModel) respuestasRepository.findAll());
 
-
-
-
-        return null;
+        return listaRespuestas;
     }
 
     public  List<PreguntasModel> ConfigurarJuego(){

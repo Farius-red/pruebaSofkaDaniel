@@ -11,13 +11,15 @@ public class RespuestasEntity {
     private  int idRespuesta ;
 
     private  String respuesta;
+    private int idPregunta;
 
     public RespuestasEntity() {
     }
 
-    public RespuestasEntity(int idRespuesta, String respuesta) {
+    public RespuestasEntity(int idRespuesta, String respuesta, int idPregunta) {
         this.idRespuesta = idRespuesta;
         this.respuesta = respuesta;
+        this.idPregunta = idPregunta;
     }
 
     public int getIdRespuesta() {
@@ -34,5 +36,13 @@ public class RespuestasEntity {
 
     public void setRespuesta(String respuesta) {
         this.respuesta = respuesta;
+    }
+
+    public int getIdPregunta() {
+        return idPregunta;
+    }
+
+    public void setIdPregunta(int idPregunta) {
+        this.idPregunta = idPregunta;
     }
 }

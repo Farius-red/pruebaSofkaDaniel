@@ -4,13 +4,18 @@ import com.prueba.daniel.juliao.pruebaDaniel.Models.CategoriaModel;
 import com.prueba.daniel.juliao.pruebaDaniel.Models.PreguntasModel;
 import com.prueba.daniel.juliao.pruebaDaniel.Models.RespuestasModel;
 import com.prueba.daniel.juliao.pruebaDaniel.interfases.Crud;
+import com.prueba.daniel.juliao.pruebaDaniel.repository.RespuestasRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@Service
 public class RespuestasService  implements Crud {
+
 
 
     @Override
@@ -26,20 +31,8 @@ public class RespuestasService  implements Crud {
     @Override
     public List<RespuestasModel> ListaRespuestas() {
         List<RespuestasModel> respuestas = new ArrayList<>();
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
-        respuestas.add(new RespuestasModel(1,"respuesta1"));
 
 
-        return null;
+        return respuestas;
     }
 }
