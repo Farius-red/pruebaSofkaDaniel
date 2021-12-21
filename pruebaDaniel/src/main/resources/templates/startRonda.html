@@ -12,15 +12,20 @@
 
      <div class="card">
          <div class="card-header">
-             <h1 class="card-text"> Bienvenido Inicie su juego </h1>
+             <h1 class="card-text" > Bienvenido  </h1>
+             <p> </p>
          </div>
           <div class="card-body">
-               
-            <form action="#" th:action="@{/iniciarJuego/inicio}" th:object="${JugadorModel}">
+              <!-- th:action="@{/iniciarJuego/inicio}" th:object="${JugadorModel} -->
+            <form action="#" >
                 <div class="mb-3">
-                    <label  class="form-label">Nombre</label>
-                    <input type="nombre" class="form-control"  th:field="*{nombre}" id="nombre" placeholder="escribe tu Nombre">
-                   
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Default radio
+                        </label>
+                      </div>
+                  
                   </div>
 
                   <div class="mb-3">
